@@ -15,6 +15,11 @@ class Envelope(ReapyObject):
     def _args(self):
         return (self.parent, self.id)
 
+    def insert_point(self, time, angle):
+        # RPR_InsertEnvelopePointEx(envelope, autoitem_idx, time, value, shape, tension, selected, noSortInOptional)
+        # (envelope, autoitem_idx, time, value, shape, tension, selected, noSortInOptional
+        RPR.InsertEnvelopePoint(self.id, time, angle, 1, 1, True, False)
+
     def add_item(self, position=0., length=1., pool=0):
         """
         Add automation item to envelope.
