@@ -23,7 +23,7 @@ def find_stubs(package: str) -> Dict[str, List[str]]:
 
 
 setup(
-    name="python-reapy",
+    name="python-reapy_local",
     version=reapy.__version__,
     description="A pythonic wrapper for REAPER's ReaScript Python API",
     long_description=long_description,
